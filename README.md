@@ -2,6 +2,10 @@
 
 This project provides a simple Docker-based setup for running **Jellyfin** (a media server) along with **Jellyseerr** (a request management and discovery frontend for Jellyfin).
 
+Docker Compose with the following components:
+- **[Jellyfin](https://jellyfin.org/)** — free and open source media server for streaming your media
+- **[Jellyseer](https://github.com/jellyfin/jellyseer)** — unofficial web UI for Jellyfin’s Live TV and DVR
+
 ---
 
 ## 📦 Services
