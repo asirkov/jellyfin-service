@@ -1,0 +1,14 @@
+# Jackett 
+config/*
+jellyfin/*
+jellyseerr/*
+jellystat/*
+
+# Logs
+logs
+*.log
+
+# dotenv environment variable files
+.env
+.env.*
+!.env.example

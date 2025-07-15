@@ -1,1 +1,60 @@
-# jellyfinn-service
+# 🍿 Jellyfin + Jellyseer Stack
+
+This project provides a simple Docker-based setup for running **Jellyfin** (a media server) along with **Jellyseerr** (a request management and discovery frontend for Jellyfin).
+
+---
+
+## 📦 Services
+
+### `jellyfin`
+
+* A free software media system that puts you in control of managing and streaming your media.
+* Web UI: [http://localhost:8096](http://localhost:8096)
+
+### `jellyseerr`
+
+* A companion for Jellyfin that lets users request movies and shows via an intuitive interface.
+* Web UI: [http://localhost:5055](http://localhost:5055)
+
+---
+
+## 🗂 Volumes
+
+| Container   | Path                   | Description                 |
+| ----------- | ---------------------- | --------------------------- |
+| jellyfin    | `./jellyfin`           | Config and metadata storage |
+| jellyseerr  | `./jellyseerr`         | Jellyseerr app config       |
+| Shared data | `/data` (host-mounted) | Media library for Jellyfin  |
+
+---
+
+## ✅ Requirements
+
+* Docker + Docker Compose
+* `.env` file with required variables:
+
+```
+PUID=1000
+PGID=1000
+TZ=Europe/Kyiv
+```
+
+---
+
+## 🚀 Usage
+
+```bash
+docker compose up -d
+```
+
+or:
+
+```bash
+./start.sh
+```
+
+---
+
+## 📄 License
+
+MIT License
