@@ -1,1 +1,1 @@
-sudo docker compose -f docker-compose.yaml up -d jellyfin jellyseerr
+sudo docker compose -f docker-compose.yaml up -d jellyfin jellyseerr watchtower
