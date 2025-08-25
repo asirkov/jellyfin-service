@@ -26,6 +26,8 @@ services:
     networks:
       jellyfinnetwork:
         ipv4_address: 172.41.0.2
+    labels:
+      - "com.centurylinklabs.watchtower.scope=jellyfin-service"
 
   jellyseerr:
     container_name: jellyseerr
@@ -40,6 +42,8 @@ services:
     networks:
       jellyfinnetwork:
         ipv4_address: 172.41.0.3
+    labels:
+      - "com.centurylinklabs.watchtower.scope=jellyfin-service"
 
   watchtower:
     image: containrrr/watchtower:latest
@@ -49,7 +53,7 @@ services:
     command: >
       --interval 300
       --cleanup
-      jellyfin jellyseerr
+      --scope jellyfin-service
     restart: always
     networks:
       jellyfinnetwork:
